@@ -13,12 +13,12 @@ HELENE / FREDO
 
 
 ---
-# Reflexion base API
+## Reflexion base API
 ---
-<!-- 
+
 <details>
 <summary>Détails</summary>
-<br> -->
+<br>
 
 
 ## User Stories
@@ -71,13 +71,13 @@ Pour le *Modèle Physique de Données*, nous avons utilisé PgAdmin4 pour établ
 
 ![MPD](./docs/img/MPD_oblog.jpg)
 
-<!-- </details> -->
+</details>
 
 ### Mise en place de la base de données
 
-<!-- <details>
+<details>
 <summary>Détails</summary>
-<br> -->
+<br>
 
 ### Migrations avec l'outil Sqitch
 
@@ -182,20 +182,59 @@ import categoriesData from './categories.json' assert {type: "json"};
 import pg from 'pg';
 const client = new pg.Client()
 ```
-<!-- ^-- TODO exemple de boucle
+<!-- ^-- TODO exemple de boucle-->
 
 
-<!-- </details> -->
+</details> 
 
 ### Mise en place du projet
 
-<!-- <details>
+<details>
 <summary>Détails</summary>
-<br> -->
+<br>
 
-<!-- </details> -->
 
-- Initialisation du projet
+
+#### 1. Initialisation du projet
+
+On initialise le projet avec `npm init`
+
+Installation de toutes les dépendances
+```
+npm i express dotenv pg helmet joi express-jsdoc-swagger
+```
+
+Installation de toutes les dev-dépendances 
+```
+npm i eslint jest --save-dev
+```
+
+Vérification dans le package.json
+
+```js
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-jsdoc-swagger": "^1.6.8",
+    "helmet": "^5.1.0",
+    "joi": "^17.6.0",
+    "pg": "^8.7.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.17.0",
+    "jest": "^28.1.1"
+  }
+```
+
+2. Structure des fichiers
+
+Nous sommes partis sur une architecture Model Controller avec un Datamapper pour récupérer nos données de la base de données
+
+![structure](./__docs__/img/structure.jpg)
+
+</details>
+
+- Mise en place du server
 
 - Mise en place des routes
 
