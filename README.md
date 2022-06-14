@@ -10,13 +10,18 @@ HELENE / FREDO
   ### Mise en place de l'API
     - Initialisation du projet 
     - Les modules nécessaires
-        - npm i express dotenv pg
 
 
 ---
 # Reflexion base API
 ---
 
+<details>
+<summary>Détails</summary>
+<br>
+
+
+## User Stories
 |        En tant que        |Je veux pouvoir |Dans le but de|
 |----------------|-------------------------------|-----------------------------|
 ||--||--|
@@ -31,3 +36,37 @@ HELENE / FREDO
 |Utilisateur|Créer une catégorie | Rajouter une catégorie à mon blog|
 |Utilisateur|Modifier une catégorie|Mettre à jour la catégorie|
 |Utilisateur|Supprimer une catégorie| detruire la catégorie|
+
+### MCD
+
+Voici le *Modèle Conceptuel de Données*.
+
+Structure des entités et associations faites avec [Mocodo](http://mocodo.wingi.net/)
+
+```
+BELONGS TO, 11 ARTICLE, 0N CATEGORY
+CATEGORY: code_category, route, label
+
+ARTICLE: code_article, slug, title, excerpt, content
+:
+```
+
+![Mcd](./docs/img/mcd.jpg)
+
+Une catégorie peut contenir plusieurs articles mais un article ne possède qu'une catégorie.
+### MLD
+
+Ci-dessous le *Modèle Logique de Données*
+
+```js
+CATEGORY ( category_id, route, label )
+ARTICLE ( article_id, slug, title, excerpt, content, #category_id )
+```
+
+### MPD
+
+Pour le *Modèle Physique de Données*, nous avons utilisé PgAdmin4 pour établir les liens entre nos tables.
+
+![MPD](./docs/img/MPD_oblog.JPG)
+
+</details>
