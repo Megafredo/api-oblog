@@ -1,5 +1,6 @@
 @entryPoint = http://localhost:4100
 
+GET {{entryPoint}}
 
 # // ------------------------------
 # // ---------------------- ARTICLE
