@@ -59,7 +59,12 @@ Tout le détail est [ici](./__docs__/08_Models.md)
 
 ## Mise en place des controllers
 
+Tout le détail de notre gestion des controllers c'est par [là](./__docs__/09_Controllers.md)
+
 ---
+
+## Notre documentation Swagger
+
 
 //TODO FRAGMENTER LE README !
 Todo :
