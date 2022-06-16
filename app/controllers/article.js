@@ -43,7 +43,6 @@ async function fetchOneArticle(req, res) {
   try {
     const articleId = +req.params.id;
 
-    // console.log(typeof articleId)
     const article = await Article.findOneArticle(articleId);
 
     if (article) res.status(200).json(article);
@@ -57,14 +56,11 @@ async function updateArticle(req, res) {
   try {
     const articleId = +req.params.id;
 
-    // console.log('START ----------------------------------',req.body)
     let articleInfo = await Article.findOneArticle(articleId);
     
     for (const key in articleInfo) {
       req.body[key] ? req.body[key] : req.body[key] = articleInfo[key];
     }
-    // console.log('END ----------------------------------',req.body)
-
 
     await Article.updateArticle(articleId, req.body);
 
