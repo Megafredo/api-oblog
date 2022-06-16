@@ -77,7 +77,7 @@ TADAAAAM
 
 Nous avons créé un fichier de logs en le laissant apparent pour afficher les tests que nous avons effectué.
 
-Tous les résultats de nos tests c'est [là](./__docs__/11_ErrorHandling.md) !
+Tous les résultats de nos tests c'est [là](./__docs__/11_errorHandling.md) !
 
 ## Petit mot d'adieux &#x1F618;
 
