@@ -2,6 +2,13 @@
 
 BEGIN;
 
+-- Création de la table Category
+CREATE TABLE IF NOT EXISTS "category" (
+  "id" INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  "route" TEXT NOT NULL,
+  "label"  TEXT NOT NULL
+);
+
 -- Création de la table Article
 CREATE TABLE IF NOT EXISTS "article" (
     "id" INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -12,13 +19,6 @@ CREATE TABLE IF NOT EXISTS "article" (
     "content" TEXT NOT NULL,
     "category_id" INT NOT NULL REFERENCES "category"("id")
     
-);
-
--- Création de la table Category
-CREATE TABLE IF NOT EXISTS "category" (
-  "id" INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-  "route" TEXT NOT NULL,
-  "label"  TEXT NOT NULL
 );
 
 COMMIT;
