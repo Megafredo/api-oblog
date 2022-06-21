@@ -2,6 +2,11 @@
 import { _400, _404, _500 } from './errorController.js';
 import { Category } from '../models/category.js'
 
+import debug from 'debug'; 
+const logger = debug('controller');
+logger('monTest Performance');
+
+
 /**
  * @typedef {*} Categories
  * @property {string} route
@@ -20,7 +25,6 @@ async function fetchArticlesByCategoryId(req, res) {
     const articles = await Category.findArticlesByCategory(categoryId);
 
     res.json(articles);
-    
   } catch (err) {
     _500(err, req, res);
   }
