@@ -20,6 +20,7 @@ async function fetchAllArticles(req, res) {
   try {
     
     const articles = await Article.findAllArticles();
+    console.log("articles: ", articles);
 
     if (articles) res.status(200).json(articles);
     else throw new Error(`Aucun article n'a été trouvé`);

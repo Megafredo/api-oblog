@@ -51,10 +51,22 @@ async function updateData(articleId, articleData) {
         WHERE "id" = $6;`,
     values: [category, slug, title, excerpt, content, articleId]
   };
+
+  //! Autres méthode (plus efficace, le calcul se fait ds SQL)
+  // const sql = {
+  //   text: `SELECT update_article($1, $2)`
+  //   values: [articleId, articleData]
+  // }
+
   const result = await client.query(sql);
 
   return result.rowCount;
 };
+
+
+
+
+
 
 //~ ------------------------------------------------------------------- DELETE CATEGORY
 async function deleteData(articleId) {

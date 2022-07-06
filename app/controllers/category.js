@@ -5,7 +5,7 @@ import { Category } from '../models/category.js'
 import debug from 'debug'; 
 const logger = debug('controller');
 logger('monTest Performance');
-
+console.log('monTest')
 
 /**
  * @typedef {*} Categories
